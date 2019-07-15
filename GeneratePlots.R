@@ -156,7 +156,7 @@ CombinedWeatherBike$SubBikeTime <- BikeTripAggregate$durationSub[BikeTripAggrega
 CombinedWeatherBike$AverageSubBikeTime <- BikeTripAggregate$averageSub[BikeTripAggregate$start_date %in% CombinedWeatherBike$DATE]
 CombinedWeatherBike$SubDailyBikers <- BikeTripAggregate$countSub[BikeTripAggregate$start_date %in% CombinedWeatherBike$DATE]
 
-
+#Generate Sub/Cust plots
 cor(CombinedWeatherBike[,c(6,12,16,17,18)],method = "kendall")
 corrplot(cor(CombinedWeatherBike[,c(6,12,16,17,18)],method = "kendall"))
 chart.Correlation(CombinedWeatherBike[,c(6,12,16,17,18)],method = "kendall")
